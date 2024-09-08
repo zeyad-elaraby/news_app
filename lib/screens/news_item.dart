@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/models/NewsData.dart';
 
@@ -16,10 +17,13 @@ class NewsItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(25),topRight: Radius.circular(25)),
+          CachedNetworkImage(
+            height: 250,
+            imageUrl: article.urlToImage??"",
+            placeholder: (context, url) => Center(child: CircularProgressIndicator()),
+            errorWidget: (context, url, error) => Icon(Icons.error),
+          ),
 
-              child: Image.network(article.urlToImage??"")),
           Text(article.author??"",
             style: TextStyle(
             color: Colors.black54,
