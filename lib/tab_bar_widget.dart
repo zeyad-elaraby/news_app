@@ -5,7 +5,8 @@ import 'package:news_app/tab_item.dart';
 import 'apis/api_manager.dart';
 
 class TabBarWidget extends StatefulWidget {
-  TabBarWidget({super.key});
+  String id;
+  TabBarWidget({required this.id,super.key});
 
   @override
   State<TabBarWidget> createState() => _TabBarItemState();
@@ -17,7 +18,7 @@ class _TabBarItemState extends State<TabBarWidget> {
   @override
   Widget build(BuildContext context) {
      return FutureBuilder(
-      future: ApiManager.getSources(),
+      future: ApiManager.getSources(widget.id),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Center(child: CircularProgressIndicator());

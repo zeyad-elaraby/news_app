@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
         selectedSideMenuItem==HomeDrawer.settings?SettingsScreen():
         selectedCategory==null?CategoriesTab(
           onClick: onCategorySelect,
-        ):TabBarWidget(),
+        ):TabBarWidget(id: selectedCategory!.id,),
       ),
     );
   }
