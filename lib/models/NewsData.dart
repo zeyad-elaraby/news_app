@@ -1,13 +1,17 @@
-import '../SourceResponse.dart';
+import 'SourceResponse.dart';
 
 class NewsDataResponse {
   NewsDataResponse({
       this.status, 
       this.totalResults, 
+      this.code,
+      this.message,
       this.articles,});
 
   NewsDataResponse.fromJson(dynamic json) {
     status = json['status'];
+    code = json['code'];
+    message = json['message'];
     totalResults = json['totalResults'];
     if (json['articles'] != null) {
       articles = [];
@@ -17,6 +21,8 @@ class NewsDataResponse {
     }
   }
   String? status;
+  String? code;
+  String? message;
   int? totalResults;
   List<Articles>? articles;
 
