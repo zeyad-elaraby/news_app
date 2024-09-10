@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/category_model.dart';
+import 'package:news_app/screens/search_tab.dart';
 import 'package:news_app/screens/settings_screen.dart';
 
 import '../apis/api_manager.dart';
@@ -39,7 +40,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   bottomRight: Radius.circular(20))),
           iconTheme: IconThemeData(color: Colors.white),
           actions: [
-              IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+              IconButton(onPressed: () {
+                showSearch(context: context, delegate: SearchTab());
+              }, icon: Icon(Icons.search)),
           ],
         ),
         drawer: Drawer(
