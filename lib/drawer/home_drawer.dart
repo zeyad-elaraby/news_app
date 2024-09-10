@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/bottom_sheets/language_bottom_sheet.dart';
 
 class HomeDrawer extends StatelessWidget {
   Function onSideMenuClick;
@@ -18,7 +20,7 @@ crossAxisAlignment: CrossAxisAlignment.start,
           color: Colors.green,
           width: double.infinity,
           // height: MediaQuery.of(context).size.height*0.17,
-          child: Text("News App!",style: TextStyle(color: Colors.white),textAlign: TextAlign.center,),
+          child: Text("news_app".tr(),style: TextStyle(color: Colors.white,fontSize: 25),textAlign: TextAlign.center,),
         ),
           SizedBox(height: 5,),
           Padding(
@@ -33,7 +35,7 @@ crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Icon(Icons.list,),
                       SizedBox(width: 3,),
-                  Text("Categories",style: TextStyle(fontWeight: FontWeight.bold),)
+                  Text("categories".tr(),style: TextStyle(fontWeight: FontWeight.bold),)
                 ],
               ),
             ),
@@ -53,7 +55,7 @@ crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Icon(Icons.settings),
             SizedBox(width: 3,),
-                  Text("Settings",style: TextStyle(fontWeight: FontWeight.bold))
+                  Text("settings".tr(),style: TextStyle(fontWeight: FontWeight.bold))
                 ],
               ),
           ),

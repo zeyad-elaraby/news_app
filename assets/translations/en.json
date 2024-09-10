@@ -1,0 +1,17 @@
+{
+  "business": "Business",
+  "sports": "Sports",
+  "entertainment": "Entertainment",
+  "general": "General",
+  "health": "Health",
+  "science": "Science",
+  "news_app": "News App",
+  "categories": "Categories",
+  "settings": "Settings",
+  "pick_your_category_of_interest": "pick your category of interest",
+  "please_enter_text_to_search": "please enter text to search",
+  "something_went_wrong": "something went wrong",
+  "language": "Language"
+
+
+}
