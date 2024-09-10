@@ -30,8 +30,8 @@ class SettingsScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Row(
                     children: [
-                      context.locale == Locale("en")?Text("english".tr(),style: TextStyle(color: Colors.green))
-                        :Text("arabic".tr(),style: TextStyle(color: Colors.green)
+                      context.locale == Locale("en")?Text("English".tr(),style: TextStyle(color: Colors.green))
+                        :Text("العربيه",style: TextStyle(color: Colors.green)
                         ,),
                       Spacer(),
                       IconButton(onPressed: () {
