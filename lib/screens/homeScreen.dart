@@ -1,9 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/models/category_model.dart';
 import 'package:news_app/screens/search_tab.dart';
 import 'package:news_app/screens/settings_screen.dart';
 
-import '../apis/api_manager.dart';
 import '../drawer/home_drawer.dart';
 import '../tab_bar_widget.dart';
 import 'categories_tab.dart';
@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: Colors.green,
           centerTitle: true,
           title: Text(
-            selectedSideMenuItem==HomeDrawer.settings?"Settings":selectedCategory==null?"News App!":selectedCategory!.name,
+            selectedSideMenuItem==HomeDrawer.settings?"settings".tr():selectedCategory==null?"news_app".tr():selectedCategory!.name,
             style: TextStyle(fontSize: 30, color: Colors.white),
           ),
           shape: RoundedRectangleBorder(

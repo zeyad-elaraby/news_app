@@ -1,0 +1,17 @@
+{
+  "business": "أعمال",
+  "sports": "رياضه",
+  "entertainment": "ترفيه",
+  "general": "عام",
+  "health": "صحه",
+  "science": "علوم",
+  "news_app": "تطبيق الأخبار",
+  "categories": "الفئات",
+  "settings": "الأعدادات",
+  "pick_your_category_of_interest": "اختر فئه اهتمامك",
+  "please_enter_text_to_search": "رجاء ادخل نص لبحث",
+  "something_went_wrong": "حدث خطأ ما",
+  "language": "اللغه"
+
+
+}

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../apis/api_manager.dart';
@@ -29,7 +30,7 @@ class SearchTab extends SearchDelegate {
   @override
   Widget buildSuggestions(BuildContext context) {
     if(query.isEmpty){
-      return Center(child: Text("please enter text to search"),);
+      return Center(child: Text("please_enter_text_to_search".tr()),);
     }
     return buildSearchDate();
   }
@@ -41,7 +42,7 @@ class SearchTab extends SearchDelegate {
           return Center(child: CircularProgressIndicator());
         }
         if (snapshot.hasError) {
-          return Text("something went wrong");
+          return Text("something_went_wrong".tr());
         }
         var articles = snapshot.data?.articles ?? [];
         return ListView.builder(

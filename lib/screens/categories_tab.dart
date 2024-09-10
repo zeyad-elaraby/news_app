@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/bottom_sheets/language_bottom_sheet.dart';
 import 'package:news_app/models/category_model.dart';
 
 import 'category_item.dart';
@@ -14,7 +16,7 @@ class CategoriesTab extends StatelessWidget {
       padding: EdgeInsets.all(18),
       child: Column(
         children: [
-          Text("Pick your category of interest",style: TextStyle(fontSize: 25 ,fontWeight: FontWeight.w700),),
+          Text("pick_your_category_of_interest".tr(),style: TextStyle(fontSize: 25 ,fontWeight: FontWeight.w700),),
           SizedBox(height: 18,),
           Expanded(
             child: GridView.builder(
