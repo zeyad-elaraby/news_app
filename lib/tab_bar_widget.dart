@@ -48,7 +48,7 @@ class _TabBarItemState extends State<TabBarWidget> {
                     ))
                         .toList())),
             FutureBuilder(
-              future: ApiManager.getNewsData(sources[selectedTabIndex].id??""),
+              future: ApiManager.getNewsData( sourceId:   sources[selectedTabIndex].id??""),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return Center(child: CircularProgressIndicator());
@@ -56,7 +56,7 @@ class _TabBarItemState extends State<TabBarWidget> {
                 if (snapshot.hasError) {
                   return Text("something went wrong");
                 }
-                var articles = snapshot.data?.articles ?? [];
+                var articles = snapshot.data!.articles ?? [];
                 return Expanded(
                   child: ListView.builder(
                     itemBuilder: (context, index) {
