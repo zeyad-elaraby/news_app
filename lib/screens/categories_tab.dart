@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app/bottom_sheets/language_bottom_sheet.dart';
 import 'package:news_app/models/category_model.dart';
 
-import 'category_item.dart';
+import '../items/category_item.dart';
 
 class CategoriesTab extends StatelessWidget {
   Function onClick;

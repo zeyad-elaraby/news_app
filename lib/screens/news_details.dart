@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app/models/NewsData.dart';
+import 'package:news_app/screens/search_tab.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class NewsDetails extends StatelessWidget {
@@ -25,7 +26,9 @@ static const String routeName="NewsDetails";
                 bottomRight: Radius.circular(20))),
         iconTheme: IconThemeData(color: Colors.white),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+          IconButton(onPressed: () {
+            showSearch(context: context, delegate: SearchTab());
+          }, icon: Icon(Icons.search)),
         ],
       ),
       body:  Container(
