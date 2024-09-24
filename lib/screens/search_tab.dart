@@ -50,13 +50,17 @@ class SearchTab extends SearchDelegate {
   appBarTheme(BuildContext context) {
     return ThemeData(
       appBarTheme: AppBarTheme(
-        backgroundColor: Colors.green,
-        centerTitle: true,
-        shape: RoundedRectangleBorder(
+          backgroundColor: Colors.green,
+          centerTitle: true,
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(20),
-                bottomRight: Radius.circular(20))),
-      ),
+              bottomLeft: Radius.circular(20),
+              bottomRight: Radius.circular(20),
+            ),
+
+          ),
+          foregroundColor: Colors.white),
+      inputDecorationTheme: InputDecorationTheme(hintStyle: TextStyle(color: Colors.white),)
     );
   }
 
